@@ -12,8 +12,15 @@ int main()
 
     if (!outfile)
     {
-
+        cerr << "cannot create file";
     }
-    cout << "Hello World!\n";
+    int i = 0;
+    while (line[i])
+    {
+        outfile.put(line[i]);
+        i++;
+    }
+    outfile.close();
+
 }
 
