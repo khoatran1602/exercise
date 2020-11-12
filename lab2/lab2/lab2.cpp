@@ -1,20 +1,19 @@
-// lab2.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+
 
 #include <iostream>
+#include <fstream>
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    char line[80] = { 0x5A, 0x3F, 0x33, 0x3D, 0x40, 0x6B, 0x4C,0x58, 0x72, 0x4E, 0x2F };
+    ofstream outfile("bin_write.hex", ios::out | ios::binary);
+
+    if (!outfile)
+    {
+
+    }
+    cout << "Hello World!\n";
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

@@ -46,7 +46,7 @@ int main(int argc, char* argv[])
 		}
 	}
 	cerr.rdbuf(cerrbuf);	// Redirecting cerr back to the console
-	cerr << "This is an output error stream which should be seen at the console" << endl;
+	errorout.close();  //close file
 
 	return 0;
 }
