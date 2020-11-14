@@ -1,19 +1,18 @@
-
 #include <iostream>
 #include <fstream>
 
 using namespace std;
 
-bool is_float(const char *val)
+bool is_float(const char* val)
 {
 	int i = 0;
 	int dot_counter = 0;
 	if (val[0] == '+' || val[0] == '0') i++;
-	while (val[i] != '\0'){
-		if (val[i] == '.'){
+	while (val[i] != '\0') {
+		if (val[i] == '.') {
 			dot_counter++;
 			if (dot_counter > 1)
-			return false;
+				return false;
 		}
 		else if (val[i] < '0' || val[i] > '9')
 			return false;
@@ -38,7 +37,7 @@ int main(int argc, char* argv[])
 		//if (!isInteger_loop(argv[i]))
 		if (!is_float(input.c_str()))
 		{
-			cerr<< input << " is a invalid integer format" << endl;
+			cerr << input << " is a invalid integer format" << endl;
 		}
 		else
 		{
